@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <list>
-
+#include <vector>
+#include <string>
 
 class Player
 {
@@ -10,18 +10,27 @@ public:
     int ID = 0;
     std::string Name;
     int Rank = 0;
-    std::list<Player>players;
 
     //конструктор за замовчуванням
     Player()
     {
+
     };
 
-    Player(int ID, std::string Name, int Rank);
+    Player(int iD, std::string name, int rank)
+    {
+        this->ID = iD;
+        this->Name = name;
+        this->Rank = rank;
+    };
+    std::string getPlayerName(std::string name) const;
+    long getCurrentId() const;
 
-    // створення гравця
-    
-    void CreatePlayer(Player& new_player);
 
 };
+
+
+
+
+
 
