@@ -6,25 +6,26 @@
 
 class Player
 {
-public:
+private:
     int ID = 0;
     std::string Name;
     int Rank = 0;
+    
+public:
+    Player ()
+    {}
 
-    //конструктор за замовчуванням
-    Player()
-    {
-
-    };
-
-    Player(int iD, std::string name, int rank)
-    {
-        this->ID = iD;
+    Player(int id, std::string name, int rank)
+    { 
+        this->ID = id;
         this->Name = name;
         this->Rank = rank;
     };
-    std::string getPlayerName(std::string name) const;
-    long getCurrentId() const;
+
+
+    std::string GetName(std::string name);
+    int GetId();
+    int GetRank();
 
 
 };

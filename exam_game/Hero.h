@@ -3,18 +3,26 @@
 
 class Hero : public Player
 {
-public:
-    int HP = 0;
-    int Damage = 0;
+private:
+    std::string Name;
+    int ID;
+    int HP;
+    int Damage;
 
+public:
     Hero()
     {
     }
+
     //конструктор
     Hero(int ID, std::string Name, int HP, int Damage);
-    std::string getHeroName(Hero& hero) const;
-    int GetHeroById(Hero& hero) const;
-    int GetHeroByDamage(Hero& hero) const;
+    
+    std::string GetName(std::string name);
+    int GetId();
 
+    int GetDamage();
+    int GetHP();
+
+  
 
 };

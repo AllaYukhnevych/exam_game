@@ -1,6 +1,6 @@
 #include "Hero.h"
 
-Hero::Hero(int ID, std::string Name, int HP, int Damage)
+Hero::Hero(int id, std::string name, int HP, int damage)
 {
     this->ID = ID;
     this->Name = Name;
@@ -8,18 +8,21 @@ Hero::Hero(int ID, std::string Name, int HP, int Damage)
     this->Damage = Damage;
 }
 
-std::string Hero::getHeroName(Hero& hero) const
+std::string Hero::GetName(std::string name)
 {
-    return hero.Name;
-}
+    return Name;
+};
 
-int Hero::GetHeroById(Hero& hero) const
+int Hero::GetId()
 {
-    return hero.ID;
-}
+    return ID;
+};
 
-int Hero::GetHeroByDamage(Hero& hero) const
+int Hero::GetDamage()
 {
-    return hero.Damage;
+    return Damage;
 }
-
+int Hero::GetHP()
+{
+    return HP;
+}
