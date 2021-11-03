@@ -1,25 +1,23 @@
 #pragma once
+#include "PlayerManager.h"
+#include "HeroManager.h"
 #include "Team.h"
-#include "Hero.h"
+#include <iostream>
 
 
-class TeamManager : public Team
+
+
+class TeamManager
 {
 public:
-	Team arr[5];
+
 
 	TeamManager()
 	{}
 
-	TeamManager(Team arr)
-	{
-	arr: this->arr;
-	}
-	//зміна
+	Team GenerateNewTeam(std::string TeamName);
 
-
-
-
+	void GetTeamInfo(Team& team);
 
 };
 
