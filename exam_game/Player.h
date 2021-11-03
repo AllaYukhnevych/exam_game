@@ -2,16 +2,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <string>
+
+
 
 class Player
 {
-private:
+public:
     int ID = 0;
     std::string Name;
     int Rank = 0;
     
-public:
+
     Player ()
     {}
 
@@ -22,12 +23,14 @@ public:
         this->Rank = rank;
     };
 
-
-    std::string GetName(std::string name);
+    std::string GetName();
     int GetId();
     int GetRank();
 
+    //додавання до рейтингу
+    void SetRank(int newRank);
 
+    friend std::ostream& operator<< (std::ostream& out, const Player& player);
 };
 
 

@@ -1,7 +1,7 @@
 #include "Player.h"
-#include <ostream>
 
-std::string Player::GetName(std::string name)
+
+std::string Player::GetName()
 {
 	return Name;
 }
@@ -14,4 +14,16 @@ int Player::GetId()
 int Player::GetRank()
 {
 	return Rank;
+}
+
+void Player::SetRank(int newRank)
+{
+	Rank = newRank;
+}
+
+//перегрузка оператора виводу
+std::ostream& operator<< (std::ostream& out, const Player& player)
+{
+	out << "Name player\t" << player.Name << "\tRank\t" << player.Rank;
+	return out;
 }
