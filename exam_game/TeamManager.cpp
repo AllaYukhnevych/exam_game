@@ -15,6 +15,7 @@ Team TeamManager::GenerateNewTeam(std::string TeamName)
 		std::cout << newPlayerlist[i] << "\n";
 		newHerolist[i] = heromanager.RandHero(newHerolist);
 		std::cout << newHerolist[i] << "\n\n";
+	
 	}
 
 	Team team(TeamName, newPlayerlist, newHerolist);

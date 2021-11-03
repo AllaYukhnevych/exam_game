@@ -41,7 +41,7 @@ Player PlayerManager::GetPlayerById(int id)
 
 void PlayerManager::ShowPlayerInfo(Player player)
 {
-	std::cout << "ID\t"<< player.GetId() << "\tName\t" << player.GetName() << "\tRank\t" << player.GetRank() << "\n";
+	std::cout << "ID = "<< player.GetId() << "\tName\t" << player.GetName() << "\tRank\t" << player.GetRank() << "\n";
 }
 
 void PlayerManager::DeletePlayer(int index)
@@ -55,9 +55,6 @@ void PlayerManager::DeletePlayer(int index)
 Player PlayerManager::RandPlayer(Player* playerlist)
 {
 	srand((unsigned)time(NULL));
-	int a;
-	a = rand() % sizeof(playerlist);
-	Player player = playresList[a];
-	DeletePlayer(a);
+	Player player = playresList[rand() % sizeof(playresList)];
 	return player;
 }

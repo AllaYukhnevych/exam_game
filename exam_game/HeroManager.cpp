@@ -33,7 +33,7 @@ Hero HeroManager::GetHeroByName(std::string name)
 	for (int i = 0; i < heroesList.size(); i++)
 	{
 		if (heroesList[i].GetName() == name)
-		return heroesList[i];
+			return heroesList[i];
 	}
 }
 
@@ -48,7 +48,7 @@ Hero HeroManager::GetHeroByById(int id)
 
 void HeroManager::ShowHeroInfo(Hero hero)
 {
-	std::cout << "ID\t" << hero.GetId() << "\tName\t" << hero.GetName() << "\tHP\t" << hero.GetHP() << "\tDamage\t" << hero.GetDamage() << "\n";
+	std::cout << "ID = " << hero.GetId() << "\tName\t" << hero.GetName() << "\tHP\t" << hero.GetHP() << "\tDamage\t" << hero.GetDamage() << "\n";
 }
 
 void HeroManager::DeleteHero(int index)
@@ -57,13 +57,25 @@ void HeroManager::DeleteHero(int index)
 	std::advance(iterator, index);
 	heroesList.erase(iterator);
 }
+void HeroManager::Print()
+{
+	for (auto elem : heroesList)
+	{
+		std::cout << elem << "\n";
+	}
+ }
 
 //рандомний вибір героя
 Hero HeroManager::RandHero(Hero* herolist)
 {
 	srand((unsigned)time(NULL));
-	std::this_thread::sleep_for(std::chrono::milliseconds(100));
-	Hero hero = heroesList[(rand() % sizeof(herolist))];
+	int a;
+	a = rand() % heroesList.size();
+	Hero hero = heroesList[a];
+	
+	std::vector<Hero>::iterator iterator = heroesList.begin();
+	std::advance(iterator, a);
+	heroesList.erase(iterator);
 	return hero;
 }
 

@@ -4,20 +4,14 @@
 #include "Team.h"
 #include <iostream>
 
-
-
-
 class TeamManager
 {
 public:
-
-
 	TeamManager()
 	{}
 
 	Team GenerateNewTeam(std::string TeamName);
 
 	void GetTeamInfo(Team& team);
-
 };
 

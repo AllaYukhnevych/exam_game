@@ -8,9 +8,9 @@
 class Player
 {
 public:
-    int ID = 0;
+    int ID ;
     std::string Name;
-    int Rank = 0;
+    int Rank;
     
 
     Player ()
