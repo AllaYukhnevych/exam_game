@@ -8,7 +8,7 @@ Hero::Hero(int id, std::string name, int HP, int damage)
     this->Damage = Damage;
 }
 
-std::string Hero::GetName(std::string name)
+std::string Hero::GetName()
 {
     return Name;
 };
@@ -22,7 +22,19 @@ int Hero::GetDamage()
 {
     return Damage;
 }
+
 int Hero::GetHP()
 {
     return HP;
+}
+
+int Hero::SetHP(int hp)
+{
+    this->HP = hp;
+    return hp;
+}
+std::ostream& operator<< (std::ostream& uot, const Hero& hero)
+{
+    uot << "Name hero\t" << hero.Name << "\tDamage\t" << hero.Damage << "\tHP\t" << hero.HP;
+    return uot;
 }
