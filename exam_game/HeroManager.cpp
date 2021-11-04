@@ -66,22 +66,33 @@ void HeroManager::Print()
  }
 
 //рандомний вибір героя
-Hero HeroManager::RandHero(Hero* herolist)
+
+Hero HeroManager::RandHero()
 {
 	srand((unsigned)time(NULL));
 	int a;
-	a = rand() % heroesList.size();
+	a = (rand() % heroesList.size());
 	Hero hero = heroesList[a];
-	
+
 	std::vector<Hero>::iterator iterator = heroesList.begin();
 	std::advance(iterator, a);
 	heroesList.erase(iterator);
+
 	return hero;
 }
 
+Hero HeroManager::RandHeroOne()
+{
+	srand((unsigned)time(NULL));
+	int a;
+	a = (rand() % new_heroesList.size());
+	Hero hero = new_heroesList[a];
 
+	std::vector<Hero>::iterator iterator = new_heroesList.begin();
+	std::advance(iterator, a);
+	new_heroesList.erase(iterator);
 
-
-
+	return hero;
+}
 
 
