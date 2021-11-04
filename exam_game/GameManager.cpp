@@ -12,8 +12,11 @@ void GameManager::PerformGameSession()
 
 	std::cout << "First team:\t" << name_team_one << "\n\n";
 	Team team1 = teamManager.GenerateNewTeam(name_team_one);
-	std::cout << "\nSecond team:\n" << name_team_two << "\n\n";
-	Team team2 = teamManager.GenerateNewTeam(name_team_two);
+
+
+	std::cout << "\nSecond team:\t" << name_team_two << "\n\n";
+	Team team2 = teamManager.GenerateNewTeamOne(name_team_two);
+
 
 	Session session;
 	session.TeamOne = team1;

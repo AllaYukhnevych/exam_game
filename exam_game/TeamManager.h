@@ -12,6 +12,8 @@ public:
 
 	Team GenerateNewTeam(std::string TeamName);
 
+	Team GenerateNewTeamOne(std::string TeamName);
+
 	void GetTeamInfo(Team& team);
 };
 
