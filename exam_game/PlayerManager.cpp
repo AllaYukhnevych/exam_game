@@ -52,9 +52,29 @@ void PlayerManager::DeletePlayer(int index)
 }
 
 //рандомний виб≥р гравц€
-Player PlayerManager::RandPlayer(Player* playerlist)
+
+Player PlayerManager::RandPlayer()
 {
 	srand((unsigned)time(NULL));
-	Player player = playresList[rand() % sizeof(playresList)];
+	int a;
+	a = (rand() % playresList.size());
+	Player player = playresList[a];
+
+	std::vector<Player>::iterator iterator = playresList.begin();
+	std::advance(iterator, a);
+	playresList.erase(iterator);
+	return player;
+}
+
+Player PlayerManager::RandPlayerOne()
+{
+	srand((unsigned)time(NULL));
+	int a;
+	a = (rand() % one_playresList.size());
+	Player player = one_playresList[a];
+
+	std::vector<Player>::iterator iterator = one_playresList.begin();
+	std::advance(iterator, a);
+	one_playresList.erase(iterator);
 	return player;
 }
