@@ -1,6 +1,6 @@
 #include "PlayerManager.h"
 
-//створенн€ нового гравц€
+// create a new player 
 Player PlayerManager::CreatePlayer(Player& new_player)
 {
 	int id;
@@ -51,8 +51,7 @@ void PlayerManager::DeletePlayer(int index)
 	playresList.erase(iterator);
 }
 
-//рандомний виб≥р гравц€
-
+// random player selection 
 Player PlayerManager::RandPlayer()
 {
 	srand((unsigned)time(NULL));
@@ -60,9 +59,7 @@ Player PlayerManager::RandPlayer()
 	a = (rand() % playresList.size());
 	Player player = playresList[a];
 
-	std::vector<Player>::iterator iterator = playresList.begin();
-	std::advance(iterator, a);
-	playresList.erase(iterator);
+	DeletePlayer(a);
 	return player;
 }
 
@@ -73,8 +70,6 @@ Player PlayerManager::RandPlayerOne()
 	a = (rand() % one_playresList.size());
 	Player player = one_playresList[a];
 
-	std::vector<Player>::iterator iterator = one_playresList.begin();
-	std::advance(iterator, a);
-	one_playresList.erase(iterator);
+	DeletePlayer(a);
 	return player;
 }

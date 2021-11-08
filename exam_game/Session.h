@@ -13,9 +13,9 @@ public:
 
     Session() {}
 
-    // підрахунок загальної кількості HP
+    // count the total number of HP 
     int GetTeamHP(Team& team);
-    // підрахунок загальної кількості Damage
+    // count the total number of Damage 
     int GetTeamDamage(Team& team);
 
     void CalculateWinner();

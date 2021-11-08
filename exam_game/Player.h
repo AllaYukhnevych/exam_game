@@ -27,7 +27,7 @@ public:
     int GetId();
     int GetRank();
 
-    //додавання до рейтингу
+    // add to rating 
     void SetRank(int newRank);
 
     friend std::ostream& operator<< (std::ostream& out, const Player& player);

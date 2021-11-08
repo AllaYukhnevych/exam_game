@@ -22,14 +22,14 @@ void GameManager::PerformGameSession()
 	session.TeamOne = team1;
 	session.TeamTwo = team2;
 
-	//визначенн€ переможц€
+	// determine the winner 
 	session.CalculateWinner();
 
 
 	GameSessions.push_back(session);
 	
 
-	//зм≥на рейтингу гравц€
+	// change the player's rating 
 	AddRank(session.Winner);
 	RemoveRank(session.Loser);
 	std::cout << "\n\n";

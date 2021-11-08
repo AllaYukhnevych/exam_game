@@ -21,7 +21,7 @@ void Player::SetRank(int newRank)
 	Rank = newRank;
 }
 
-//перегрузка оператора виводу
+// overload the output operator 
 std::ostream& operator<< (std::ostream& out, const Player& player)
 {
 	out << "Name player\t" << player.Name << "\tRank\t" << player.Rank;

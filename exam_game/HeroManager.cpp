@@ -1,9 +1,6 @@
 #include "HeroManager.h"
 
-
-
-
-//створення героя
+// create a hero 
 Hero HeroManager::CreateHero(Hero new_hero)
 {
 	int id;
@@ -65,7 +62,7 @@ void HeroManager::Print()
 	}
  }
 
-//рандомний вибір героя
+// random choice of the hero 
 
 Hero HeroManager::RandHero()
 {

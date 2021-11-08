@@ -1,6 +1,6 @@
 #include "TeamManager.h"
 
-// створення команди
+// create a team 
 Team TeamManager::GenerateNewTeam(std::string TeamName)
 {
 	PlayerManager playermanager;
@@ -15,6 +15,7 @@ Team TeamManager::GenerateNewTeam(std::string TeamName)
 		std::cout << newPlayerlist[i] << "\n";
 		newHerolist[i] = heromanager.RandHero();
 		std::cout << newHerolist[i] << "\n\n";
+		
 	}
 
 	Team team(TeamName, newPlayerlist, newHerolist);
@@ -41,7 +42,7 @@ Team TeamManager::GenerateNewTeamOne(std::string TeamName)
 	return team;
 }
 
-//інформація про команду
+// team information 
 void TeamManager::GetTeamInfo(Team& team)
 {
 	PlayerManager playermanager;
