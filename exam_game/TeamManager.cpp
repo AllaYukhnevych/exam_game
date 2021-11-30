@@ -40,6 +40,7 @@ Team TeamManager::GenerateNewTeamOne(std::string TeamName)
 
 	Team team(TeamName, newPlayerlist, newHerolist);
 	return team;
+	
 }
 
 // team information 

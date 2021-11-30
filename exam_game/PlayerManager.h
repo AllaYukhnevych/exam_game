@@ -8,7 +8,7 @@
 class PlayerManager : public Player
 {
     public:
-     std::vector<Player>playresList { 
+        std::vector<Player>playresList{
          Player(1, "Dendi", (rand() % 100)), Player(3, "SumaiL", (rand() % 100)), Player(4, "Topson", (rand() % 100)),
          Player(5, "Puppey", (rand() % 100)), Player(6, "Crystal", (rand() % 100)), Player(7, "GeneRaL", (rand() % 100)),
          Player(8, "Yatoro", (rand() % 100)), Player(9, "Arteezy", (rand() % 100)), Player(10, "Pikachu", (rand() % 100)),
